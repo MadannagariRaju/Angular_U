@@ -10,6 +10,7 @@ import { PostEditComponent } from './post-edit/post-edit.component';
 import { AuthComponent } from './auth/auth.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 
 const routes : Routes =[
@@ -49,10 +50,11 @@ const routes : Routes =[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

@@ -1,8 +1,8 @@
-<h2 class="my-5">{{ postInput?.title }}</h2>
+<h2 class="my-5">{{ postInput?.title | uppercase}}</h2>
 <p>{{ postInput?.description }}</p>
 <img src="{{ postInput?.imagePath }}" alt="loading..." class="img-responsive" width="100%" height="20%"/>
 <p>{{ postInput?.author }}</p>
 <button class="btn btn-primary" (click)="updatePostLikes()">Like : {{postInput?.numberOfLikes}}</button>
-<p>{{ postInput?.datetimeCreated }}</p>
+<p>{{ postInput?.datetimeCreated | date }}</p>
 <button class="btn btn-success mx-3" (click)="editPostBtn()">Edit</button> 
  <button class="btn btn-danger" (click)="deletePostBtn()">Delete</button>
